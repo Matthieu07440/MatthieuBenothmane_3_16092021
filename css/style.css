@@ -1,17 +1,16 @@
 @font-face {
   font-family: "Roboto-medium";
-  src: url(../Roboto/Roboto-Medium.ttf);
+  src: url(../polices/Roboto/Roboto-Medium.ttf);
 }
 @font-face {
   font-family: "Roboto-thin";
-  src: url(../Roboto/Roboto-Thin.ttf);
+  src: url(../polices/Roboto/Roboto-Thin.ttf);
 }
 @font-face {
   font-family: "Roboto-regular";
-  src: url(../Roboto/Roboto-Regular.ttf);
+  src: url(../polices/Roboto/Roboto-Regular.ttf);
 }
 body {
-  max-width: 500px;
   margin: 0px;
 }
 body h1, body h3 {
@@ -39,6 +38,7 @@ body h6 {
 }
 
 .content {
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -106,7 +106,16 @@ header .logo {
   border-style: none;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  opacity: 1;
+  cursor: pointer;
 }
+.discover .discover__btn:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
+  transition-duration: 0.5s;
+}
+
 .function {
   width: 90%;
   padding-left: 20px;
@@ -145,7 +154,10 @@ header .logo {
   color: white;
   border-radius: 50%;
   margin: -8px;
-  padding: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: small;
 }
 .function .function__menu .function__menu--btn .icone {
@@ -209,6 +221,7 @@ header .logo {
 .restaurants .restaurants__card--info {
   width: 100%;
   background-color: white;
+  z-index: 0;
   color: black;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -223,7 +236,6 @@ header .logo {
   width: 90%;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: black;
   font-size: medium;
 }
 .restaurants .restaurants__card--text .restaurants__card--text, .restaurants .restaurants__card--text h4, .restaurants .restaurants__card--text h5 {
@@ -231,9 +243,16 @@ header .logo {
   margin-top: 0px;
   margin-left: 10px;
 }
-.restaurants .restaurants__card--fav i {
+.restaurants .fa-heart {
   font-size: x-large;
   margin-right: 20px;
+  transition: color, font-weight;
+}
+.restaurants .fa-heart:hover {
+  color: #FF79DA;
+  font-weight: bolder;
+  transition-delay: 0s, 1s;
+  transition-duration: 2s, 2s;
 }
 
 footer {

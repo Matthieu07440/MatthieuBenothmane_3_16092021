@@ -8,22 +8,21 @@ $title-font: "Title-font";
 
 @font-face {
     font-family: "Roboto-medium";
-    src: url(../Roboto/Roboto-Medium.ttf);
+    src: url(../polices/Roboto/Roboto-Medium.ttf);
 }
 @font-face {
     font-family: "Roboto-thin";
-    src: url(../Roboto/Roboto-Thin.ttf);
+    src: url(../polices/Roboto/Roboto-Thin.ttf);
 }
 @font-face {
     font-family: "Roboto-regular";
-    src: url(../Roboto/Roboto-Regular.ttf);
+    src: url(../polices/Roboto/Roboto-Regular.ttf);
 }
 @font-face {
     font-family: "Title-font";
-    src: url(../Shrikhand/Shrikhand-Regular.ttf);
+    src: url(../polices/Shrikhand/Shrikhand-Regular.ttf);
 }
 body {
-    max-width: 500px;
     margin: 0px;
     h1 {
         font-family: $title-font;
@@ -55,6 +54,7 @@ body {
     }
 }
 .content {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -146,6 +146,13 @@ header {
         border-style: none;
         color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(1.2);
+            transform: scale(1.1);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
+            transition-duration: 0.5s;
+        }
     }
 }
 footer {
