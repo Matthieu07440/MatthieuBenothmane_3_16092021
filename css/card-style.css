@@ -144,6 +144,7 @@ header a {
   border-style: none;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+<<<<<<< HEAD
   cursor: pointer;
 }
 .commander button:hover {
@@ -151,6 +152,8 @@ header a {
   transform: scale(1.1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
   transition-duration: 0.5s;
+=======
+>>>>>>> main
 }
 
 footer {
