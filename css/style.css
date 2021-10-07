@@ -198,6 +198,10 @@ header .logo {
   flex-wrap: wrap;
   margin-bottom: 20px;
   text-decoration: none;
+  transition: transform 1s;
+}
+.restaurants .restaurants__card:hover {
+  transform: scale(1.05);
 }
 .restaurants .restaurants__card img {
   -o-object-fit: cover;
@@ -221,7 +225,6 @@ header .logo {
 .restaurants .restaurants__card--info {
   width: 100%;
   background-color: white;
-  z-index: 0;
   color: black;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -262,6 +265,7 @@ footer {
 }
 footer h6 {
   margin: 0px;
+  color: white;
 }
 
 .footer__infos {
@@ -305,4 +309,7 @@ footer h6 {
 
 .footer__infos--contact {
   margin-bottom: 30px;
+}
+.footer__infos--contact a {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

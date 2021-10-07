@@ -200,6 +200,10 @@ $regular-font: "Roboto-regular";
             flex-wrap: wrap;
             margin-bottom: 20px;
             text-decoration: none;
+            transition: transform 1s;
+            &:hover{
+                transform: scale(1.05);
+            }
         img {
             object-fit: cover;
             border-top-left-radius: 15px;
@@ -222,7 +226,6 @@ $regular-font: "Roboto-regular";
     .restaurants__card--info{
         width: 100%;
         background-color: white;
-        z-index: 0;
         color: black;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -262,6 +265,7 @@ $regular-font: "Roboto-regular";
         color: white;
         h6 {
             margin: 0px;
+            color: white;
         }
     }   
     .footer__infos{
@@ -301,6 +305,9 @@ $regular-font: "Roboto-regular";
     }
     .footer__infos--contact {
         margin-bottom: 30px;
+        a{
+        text-decoration: none;
+    }
     }  
 @media only screen and (min-width: 450px) {
 }
