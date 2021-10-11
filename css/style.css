@@ -251,25 +251,33 @@ header .logo {
   width: 25px;
   height: 25px;
   margin-right: 20px;
-  font-size: x-large;
+  font-size: 23px;
 }
 .restaurants .restaurants__card--fav .fa-heart {
-  opacity: 1;
-  transition: 1s linear;
   font-weight: lighter;
-}
-.restaurants .restaurants__card--fav .fa-heart:hover {
-  opacity: 0;
+  transition: color 1s cubic-bezier(0.57, -0.11, 0.36, 0.96), opacity 2s ease-in;
 }
 .restaurants .restaurants__card--fav .fa-heart-like {
+  background-image: linear-gradient(190deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: absolute;
-  transition: 2s ease-in;
+  right: 29px;
+  bottom: 24px;
+  opacity: 0;
+  font-size: 9px;
+  font-weight: bold;
+  transition: font-size 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), right 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), bottom 3s cubic-bezier(0.57, -0.11, 0.36, 0.96), opacity 1s cubic-bezier(0.57, -0.11, 0.36, 0.96);
+}
+.restaurants .restaurants__card--fav:hover .fa-heart {
+  color: #9356DC;
   opacity: 0;
 }
-.restaurants .restaurants__card--fav .fa-heart-like:hover {
+.restaurants .restaurants__card--fav:hover .fa-heart-like {
+  font-size: 24px;
+  right: 22px;
+  bottom: 24px;
   opacity: 1;
-  color: #FF79DA;
-  font-weight: bold;
 }
 
 footer {

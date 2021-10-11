@@ -1,6 +1,12 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
+@mixin btn-color {
+    background-image: linear-gradient(190deg, $primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 $medium-font: "Roboto-medium";
 $thin-font: "Roboto-thin";
 $regular-font: "Roboto-regular";
@@ -251,23 +257,31 @@ $regular-font: "Roboto-regular";
             width: 25px;
             height: 25px;
             margin-right: 20px;
-            font-size: x-large;
+            font-size: 23px;
             .fa-heart{
-                opacity: 1;
-                transition: 1s linear;
                 font-weight: lighter;
-                &:hover{
-                    opacity: 0;
-                }
+                transition: color 1s cubic-bezier(.57,-0.11,.36,.96), opacity 2s ease-in ;
             }
             .fa-heart-like{
+                @include btn-color;
                 position: absolute;
-                transition: 2s ease-in;
+                right: 29px;
+                bottom: 24px;
                 opacity: 0;
-                &:hover{
-                    opacity: 1;
-                    color: $secondary-color;
-                    font-weight: bold ;
+                font-size: 9px;
+                font-weight: bold ;
+                transition: font-size 2s cubic-bezier(.57,-0.11,.36,.96), right 2s cubic-bezier(.57,-0.11,.36,.96), bottom 3s cubic-bezier(.57,-0.11,.36,.96), opacity 1s cubic-bezier(.57,-0.11,.36,.96);
+            }
+        &:hover{
+            .fa-heart{
+                color: $primary-color;
+                opacity: 0;
+            }                  
+            .fa-heart-like{
+                font-size: 24px;
+                right: 22px;
+                bottom: 24px;
+                opacity: 1;
                 }       
             }            
         }
