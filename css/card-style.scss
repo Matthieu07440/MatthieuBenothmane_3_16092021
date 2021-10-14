@@ -153,9 +153,54 @@ header {
         display: flex;
         align-content: center;
         align-items: center;
+        justify-content: space-between;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        .fa-check-circle {
+            display: none;
+        }
+        &:hover{
+            .order {
+                background-color: #99E2D0;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                padding: 11px 10px 12px 11px;
+                animation: order 400ms linear 0s 1 alternate forwards;
+                @keyframes order {
+                    0% {
+                        opacity: 1;
+                        transform: translateX(70px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateX(0px);
+                    }
+                }
+                .fa-check-circle {
+                    margin: 14px 11px 14px 11px;
+                    font-size: x-large;
+                    color: white;
+                    display: block;
+                    animation: check 400ms linear 0s 1 alternate forwards;
+                    @keyframes check {
+                        0% {
+                            opacity: 1;
+                            transform: rotate3d(0, 0, 1, 0deg);
+                        }
+                        50% {
+                            opacity: 1;
+                            transform: rotate3d(0, 0, 1, 180deg);
+                        }
+                        100% {
+                            opacity: 1;
+                            transform: rotate3d(0, 0, 1, 360deg);
+                        }
+                    }
+                }
+            }
+        }
         .menu__card--info {
-            width: 80%;
+            width: 90%;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -164,17 +209,7 @@ header {
             padding-left: 10px;
             padding-right: 10px;
         }
-        .order {
-            background-color: #99E2D0;
-            border-bottom-right-radius: 20px;
-            border-top-right-radius: 20px;
-            padding: 11px 10px 12px 11px;
-            .fa-check-circle {
-                margin: 14px 11px 14px 11px;
-                font-size: x-large;
-                color: white;
-            }
-        }
+        
     }    
     .plat1{    
         animation: menu 2s linear 0s 1 alternate forwards;

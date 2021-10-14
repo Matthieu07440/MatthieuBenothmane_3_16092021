@@ -145,10 +145,79 @@ header a {
   display: flex;
   align-content: center;
   align-items: center;
+  justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.menu__card li .fa-check-circle {
+  display: none;
+}
+.menu__card li:hover .order {
+  background-color: #99E2D0;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 11px 10px 12px 11px;
+  -webkit-animation: order 400ms linear 0s 1 alternate forwards;
+          animation: order 400ms linear 0s 1 alternate forwards;
+}
+@-webkit-keyframes order {
+  0% {
+    opacity: 1;
+    transform: translateX(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes order {
+  0% {
+    opacity: 1;
+    transform: translateX(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.menu__card li:hover .order .fa-check-circle {
+  margin: 14px 11px 14px 11px;
+  font-size: x-large;
+  color: white;
+  display: block;
+  -webkit-animation: check 400ms linear 0s 1 alternate forwards;
+          animation: check 400ms linear 0s 1 alternate forwards;
+}
+@-webkit-keyframes check {
+  0% {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+@keyframes check {
+  0% {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
 }
 .menu__card li .menu__card--info {
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -156,17 +225,6 @@ header a {
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
-}
-.menu__card li .order {
-  background-color: #99E2D0;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  padding: 11px 10px 12px 11px;
-}
-.menu__card li .order .fa-check-circle {
-  margin: 14px 11px 14px 11px;
-  font-size: x-large;
-  color: white;
 }
 .menu__card .plat1 {
   -webkit-animation: menu 2s linear 0s 1 alternate forwards;
