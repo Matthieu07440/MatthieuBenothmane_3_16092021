@@ -160,6 +160,19 @@ header {
             display: none;
         }
         &:hover{
+            .menu__card--prix {
+                animation: prix 400ms linear 0s 1 alternate forwards;
+                @keyframes prix {
+                    0% {
+                        opacity: 1;
+                        transform: translateX(50px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateX(5px);
+                    }
+                }
+            }
             .order {
                 background-color: #99E2D0;
                 border-bottom-right-radius: 20px;

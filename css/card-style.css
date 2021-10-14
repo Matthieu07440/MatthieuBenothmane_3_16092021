@@ -152,6 +152,30 @@ header a {
 .menu__card li .fa-check-circle {
   display: none;
 }
+.menu__card li:hover .menu__card--prix {
+  -webkit-animation: prix 400ms linear 0s 1 alternate forwards;
+          animation: prix 400ms linear 0s 1 alternate forwards;
+}
+@-webkit-keyframes prix {
+  0% {
+    opacity: 1;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+}
+@keyframes prix {
+  0% {
+    opacity: 1;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+}
 .menu__card li:hover .order {
   background-color: #99E2D0;
   border-bottom-right-radius: 20px;
