@@ -31,28 +31,6 @@ $title-font: "Title-font";
     
     body {
         margin: 0px;
-        .loader{
-            display: block;
-            height: 100%;
-            position: relative;
-            font-family: "Title-font";
-            background-color: #99E2D0;
-            animation: loader 2s linear 0s 1 forwards;
-            @keyframes loader {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    opacity: 1;
-                }
-                75% {
-                    opacity: 1;
-                }
-                100% {
-                    opacity: 0;
-                }
-            }
-        }
         h1, h3{
             font-family: $medium-font;
             font-size: x-large;
@@ -82,6 +60,132 @@ $title-font: "Title-font";
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        .loader{
+            height: 100%;
+            width: 100%;
+            z-index: 9;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $primary-color;
+            font-size: xx-large;
+            font-family: "Title-font";
+            background-color: #99E2D0;
+            animation: loader 8s linear 1 forwards;
+            @keyframes loader {
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 1;
+                }
+                75% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+            .brand {
+                position: absolute;
+                text-align: center;
+                padding-left: 130px;
+                padding-right: 130px;
+                padding-top: 130px;
+                padding-bottom: 130px;
+                border-top: 10px solid $secondary-color;
+                border-bottom: 10px solid $secondary-color;
+                border-left: 10px solid $primary-color;
+                border-right: 10px solid $primary-color;
+                border-radius: 150px;
+                animation: brand 2s ease-in-out infinite both;
+            }
+            @keyframes brand {
+                0%{
+                    transform: rotate(0);
+                    border-top: 10px solid $secondary-color;
+                    border-bottom: 10px solid $secondary-color;
+                    border-left: 10px solid $primary-color;
+                    border-right: 10px solid $primary-color;
+                }
+                50%{
+                    transform: rotate(180deg);
+                    border-top: 5px dotted $primary-color;
+                    border-bottom: 5px dotted $primary-color;
+                    border-left: 5px dotted $primary-color;
+                    border-right: 5px dotted $primary-color;
+                }
+                100%{
+                    transform: rotate(360deg);
+                    border-top: 10px solid $secondary-color;
+                    border-bottom: 10px solid $secondary-color;
+                    border-left: 10px solid $primary-color;
+                    border-right: 10px solid $primary-color;
+                }
+            }    
+            .letter {
+                margin-right: 5px;
+                animation: letter 1500ms linear 0s 2 backwards;            }
+            .letter:nth-child(n+2) {
+                animation-delay: 0s;
+            }
+            .letter:nth-child(n+3){
+                animation-delay: 200ms;
+            }
+            .letter:nth-child(n+4){
+                animation-delay: 400ms;
+            }
+            .letter:nth-child(n+5){
+                animation-delay: 600ms;
+            }
+            .letter:nth-child(n+6){
+                animation-delay: 800ms;
+            }
+            .letter:nth-child(n+7){
+                animation-delay: 1000ms;
+            }
+            .letter:nth-child(n+8){
+                animation-delay: 1200ms;
+            }
+            .letter:nth-child(n+9){
+                animation-delay: 1400ms;
+            }
+            @keyframes letter {
+                0% {
+                  animation-timing-function: ease-in;
+                  opacity: 0;
+                  transform: translateY(-250px);
+                }
+              
+                38% {
+                  animation-timing-function: ease-out;
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              
+                55% {
+                  animation-timing-function: ease-in;
+                  transform: translateY(-65px);
+                  color: $secondary-color;
+                }
+              
+                72% {
+                  animation-timing-function: ease-out;
+                  transform: translateY(0);
+                }
+              
+                81% {
+                  animation-timing-function: ease-in;
+                  transform: translateY(-28px);
+                }
+              
+                100% {
+                  animation-timing-function: ease-out;
+                  transform: translateY(0);
+                }
+            }         
+        }
     }
     header {
         width: 100%;
