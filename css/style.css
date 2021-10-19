@@ -10,8 +10,49 @@
   font-family: "Roboto-regular";
   src: url(../polices/Roboto/Roboto-Regular.ttf);
 }
+@font-face {
+  font-family: "Title-font";
+  src: url(../polices/Shrikhand/Shrikhand-Regular.ttf);
+}
 body {
   margin: 0px;
+}
+body .loader {
+  display: block;
+  height: 100%;
+  position: relative;
+  font-family: "Title-font";
+  background-color: #99E2D0;
+  -webkit-animation: loader 2s linear 0s 1 forwards;
+          animation: loader 2s linear 0s 1 forwards;
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 body h1, body h3 {
   font-family: "Roboto-medium";

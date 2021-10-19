@@ -10,6 +10,7 @@ $third-color: #99E2D0;
 $medium-font: "Roboto-medium";
 $thin-font: "Roboto-thin";
 $regular-font: "Roboto-regular";
+$title-font: "Title-font";
 
 @font-face {
     font-family: "Roboto-medium";
@@ -23,9 +24,35 @@ $regular-font: "Roboto-regular";
     font-family: "Roboto-regular";
     src: url(../polices/Roboto/Roboto-Regular.ttf);
 }
-
+@font-face {
+    font-family: "Title-font";
+    src: url(../polices/Shrikhand/Shrikhand-Regular.ttf);
+}
+    
     body {
         margin: 0px;
+        .loader{
+            display: block;
+            height: 100%;
+            position: relative;
+            font-family: "Title-font";
+            background-color: #99E2D0;
+            animation: loader 2s linear 0s 1 forwards;
+            @keyframes loader {
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 1;
+                }
+                75% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
         h1, h3{
             font-family: $medium-font;
             font-size: x-large;

@@ -148,6 +148,25 @@ header a {
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
+  overflow: hidden;
+}
+.menu__card li .menu__card--info {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__card li .menu__card--txt {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.menu__card li .menu__card--prix {
+  padding-bottom: 15px;
 }
 .menu__card li .fa-check-circle {
   display: none;
@@ -180,7 +199,9 @@ header a {
   background-color: #99E2D0;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  padding: 11px 10px 12px 11px;
+  height: 75px;
+  width: 90px;
+  text-align: center;
   -webkit-animation: order 400ms linear 0s 1 alternate forwards;
           animation: order 400ms linear 0s 1 alternate forwards;
 }
@@ -205,7 +226,7 @@ header a {
   }
 }
 .menu__card li:hover .order .fa-check-circle {
-  margin: 14px 11px 14px 11px;
+  margin-top: 25px;
   font-size: x-large;
   color: white;
   display: block;
@@ -239,16 +260,6 @@ header a {
     opacity: 1;
     transform: rotate3d(0, 0, 1, 360deg);
   }
-}
-.menu__card li .menu__card--info {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 .menu__card .plat1 {
   -webkit-animation: menu 2s linear 0s 1 alternate forwards;
