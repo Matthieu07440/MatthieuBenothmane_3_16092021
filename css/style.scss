@@ -72,7 +72,7 @@ $title-font: "Title-font";
             font-size: xx-large;
             font-family: "Title-font";
             background-color: #99E2D0;
-            animation: loader 8s linear 1 forwards;
+            animation: loader 6s linear 1 forwards;
             @keyframes loader {
                 0% {
                     opacity: 1;
@@ -87,7 +87,7 @@ $title-font: "Title-font";
                     opacity: 0;
                 }
             }
-            .brand {
+            .circle1 {
                 position: absolute;
                 text-align: center;
                 padding-left: 130px;
@@ -99,9 +99,9 @@ $title-font: "Title-font";
                 border-left: 10px solid $primary-color;
                 border-right: 10px solid $primary-color;
                 border-radius: 150px;
-                animation: brand 2s ease-in-out infinite both;
+                animation: circle1 2s ease infinite both;
             }
-            @keyframes brand {
+            @keyframes circle1 {
                 0%{
                     transform: rotate(0);
                     border-top: 10px solid $secondary-color;
@@ -123,33 +123,63 @@ $title-font: "Title-font";
                     border-left: 10px solid $primary-color;
                     border-right: 10px solid $primary-color;
                 }
-            }    
+            }
+            .circle2 {
+                position: absolute;
+                text-align: center;
+                padding-left: 155px;
+                padding-right: 155px;
+                padding-top: 155px;
+                padding-bottom: 155px;
+                border-top: 5px double white;
+                border-bottom: 5px solid white;
+                border-radius: 190px;
+                animation: circle2 2s linear reverse infinite both;
+            }
+            @keyframes circle2 {
+                0%{
+                    transform: rotate(0);
+                    border-top: 5px double white;
+                    border-bottom: 5px solid white;
+                }
+                50%{
+                    border-top: 5px solid white;
+                    border-bottom: 5px double white;
+                }
+                75%{
+                    border-top: 5px double white;
+                    border-bottom: 5px double white;
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }   
             .letter {
                 margin-right: 5px;
-                animation: letter 1500ms linear 0s 2 backwards;            }
+                animation: letter 2000ms linear 0s 2 forwards;            }
             .letter:nth-child(n+2) {
                 animation-delay: 0s;
             }
             .letter:nth-child(n+3){
-                animation-delay: 200ms;
+                animation-delay: 100ms;
             }
             .letter:nth-child(n+4){
-                animation-delay: 400ms;
+                animation-delay: 200ms;
             }
             .letter:nth-child(n+5){
-                animation-delay: 600ms;
+                animation-delay: 300ms;
             }
             .letter:nth-child(n+6){
-                animation-delay: 800ms;
+                animation-delay: 400ms;
             }
             .letter:nth-child(n+7){
-                animation-delay: 1000ms;
+                animation-delay: 500ms;
             }
             .letter:nth-child(n+8){
-                animation-delay: 1200ms;
+                animation-delay: 600ms;
             }
             .letter:nth-child(n+9){
-                animation-delay: 1400ms;
+                animation-delay: 700ms;
             }
             @keyframes letter {
                 0% {
@@ -166,20 +196,14 @@ $title-font: "Title-font";
               
                 55% {
                   animation-timing-function: ease-in;
-                  transform: translateY(-65px);
+                  transform: translateY(-50px);
                   color: $secondary-color;
                 }
               
                 72% {
                   animation-timing-function: ease-out;
                   transform: translateY(0);
-                }
-              
-                81% {
-                  animation-timing-function: ease-in;
-                  transform: translateY(-28px);
-                }
-              
+                }  
                 100% {
                   animation-timing-function: ease-out;
                   transform: translateY(0);
@@ -207,13 +231,14 @@ $title-font: "Title-font";
         .location__btn{
             display: flex;
             justify-content: space-between;
-            width: 35%;
+            justify-items: center;
             .location__btn--icon {
                 margin-right: 15px;
             }
-
-        }
-        
+            input{
+                width: 100px;
+            }
+        } 
     }
     .input {
         background-color: transparent;
@@ -468,4 +493,14 @@ $title-font: "Title-font";
     }
     }  
 @media only screen and (min-width: 450px) {
+    .content{
+        min-width: 450px;
+        max-width: 700px;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .content{
+        min-width: 700px;
+    }
+    
 }
