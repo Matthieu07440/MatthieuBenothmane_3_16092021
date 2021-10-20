@@ -59,7 +59,7 @@ $title-font: "Title-font";
         max-width: 500px;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         .loader{
             height: 100%;
             width: 100%;
@@ -211,6 +211,11 @@ $title-font: "Title-font";
             }         
         }
     }
+    .media-header{
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
     header {
         width: 100%;
         text-align: center;
@@ -221,13 +226,13 @@ $title-font: "Title-font";
         }
     }
     .location {
-        height: 45px;
         background-color: #eaeaea;
-        width: 100%;
         display: flex;
         align-content: center;
         justify-content: center;
         align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
         .location__btn{
             display: flex;
             justify-content: space-between;
@@ -237,12 +242,10 @@ $title-font: "Title-font";
             }
             input{
                 width: 100px;
+                background-color: transparent;
+                border: none;
             }
         } 
-    }
-    .input {
-        background-color: transparent;
-        border: none;
     }
     .discover {
         width: 100%;
@@ -283,17 +286,18 @@ $title-font: "Title-font";
         }    
     }
     .function {
-        width: 90%;
-        padding-left: 20px;
+        width: 95%;
+        margin: auto;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: flex-start;
         .function__title {
             margin-bottom: 0px;
+            text-align: center;
         }
         nav {
-            width: 100%;
+            width: 97%;
         }
     }
     .function__menu {
@@ -301,7 +305,6 @@ $title-font: "Title-font";
         padding: 0px;
         display: flex;
         flex-direction: column;
-        align-items: center;
         list-style-type: none;
         .function__menu--btn {
             background-color: #f6f6f6;
@@ -309,7 +312,7 @@ $title-font: "Title-font";
             margin-bottom: 10px;
             padding-bottom: 25px;
             padding-top: 25px;
-            margin-left: 23px;
+            margin-left: 11px;
             display: flex;
             align-items: center;
             border-radius: 20px;
@@ -363,6 +366,7 @@ $title-font: "Title-font";
             margin-bottom: 20px;
             text-decoration: none;
             transition: transform 1s;
+            cursor: pointer;
             &:hover{
                 transform: scale(1.05);
             }
@@ -496,11 +500,78 @@ $title-font: "Title-font";
     .content{
         min-width: 450px;
         max-width: 700px;
+        .media-header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            header {
+                width: 70%;
+                .logo {
+                    width: 50%;
+                }
+            }
+            .location__btn--icon {
+                margin-left: 10px;
+            }
+        }
+        .footer__infos{
+            align-items: center;
+        }
     }
 }
 @media only screen and (min-width: 700px) {
     .content{
         min-width: 700px;
+        max-width: 1450px;
+        margin: auto;
+        .media-header{
+            justify-content: flex-start;
+        }
+        header {
+            width: 60%;
+            .logo {
+                width: 50%;
+            }
+        }
+        .location {
+            width: 40%;
+            .location__btn--icon {
+                font-size: x-large;
+            }
+        }
+        .function {
+            width: 90%;
+        }
+        .function__menu--btn:nth-child(1) {
+            width: 40%;
+            margin-bottom: 30px;
+        }
+        .function__menu--btn:nth-child(2) {
+            width: 40%;
+            margin-bottom: 30px;
+            margin-left: 30%;
+        }
+        .function__menu--btn:nth-child(3) {
+            width: 40%;
+            margin-bottom: 30px;
+            margin-left: 60%;
+        }
+        .restaurants__display{
+            flex-direction: row;
+            justify-content: space-around;
+            .restaurants__card {
+                width: 45%;
+                margin-bottom: 30px;
+
+            }
+        }
+        .footer__infos{
+            margin-left: 20px;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
     }
-    
 }
