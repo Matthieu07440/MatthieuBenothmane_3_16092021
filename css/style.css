@@ -50,8 +50,8 @@ body h6 {
 .content .loader {
   height: 100%;
   width: 100%;
-  z-index: 9;
   position: fixed;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,6 +74,7 @@ body h6 {
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes loader {
@@ -88,6 +89,7 @@ body h6 {
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 .content .loader .circle1 {
@@ -306,11 +308,11 @@ body h6 {
 header {
   width: 100%;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 header .logo {
   width: 35%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .location {
@@ -528,6 +530,7 @@ header .logo {
   font-size: 9px;
   font-weight: bold;
   transition: font-size 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), right 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), bottom 3s cubic-bezier(0.57, -0.11, 0.36, 0.96), opacity 1s cubic-bezier(0.57, -0.11, 0.36, 0.96);
+  -webkit-transition: font-size 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), right 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), bottom 3s cubic-bezier(0.57, -0.11, 0.36, 0.96), opacity 1s cubic-bezier(0.57, -0.11, 0.36, 0.96);
 }
 .restaurants .restaurants__card--fav:hover .fa-heart {
   color: #9356DC;
@@ -664,6 +667,9 @@ footer h6 {
   .content .restaurants__display .restaurants__card {
     width: 45%;
     margin-bottom: 30px;
+  }
+  .content .restaurants__display img {
+    height: 300px;
   }
   .content .footer__infos {
     margin-left: 20px;

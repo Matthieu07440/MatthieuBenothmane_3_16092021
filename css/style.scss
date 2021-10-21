@@ -63,8 +63,8 @@ $title-font: "Title-font";
         .loader{
             height: 100%;
             width: 100%;
-            z-index: 9;
             position: fixed;
+            z-index: 2;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -85,6 +85,7 @@ $title-font: "Title-font";
                 }
                 100% {
                     opacity: 0;
+                    visibility: hidden;
                 }
             }
             .circle1 {
@@ -219,10 +220,10 @@ $title-font: "Title-font";
     header {
         width: 100%;
         text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
         .logo {
             width: 35%;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     }
     .location {
@@ -431,6 +432,7 @@ $title-font: "Title-font";
                 font-size: 9px;
                 font-weight: bold ;
                 transition: font-size 2s cubic-bezier(.57,-0.11,.36,.96), right 2s cubic-bezier(.57,-0.11,.36,.96), bottom 3s cubic-bezier(.57,-0.11,.36,.96), opacity 1s cubic-bezier(.57,-0.11,.36,.96);
+                -webkit-transition: font-size 2s cubic-bezier(.57,-0.11,.36,.96), right 2s cubic-bezier(.57,-0.11,.36,.96), bottom 3s cubic-bezier(.57,-0.11,.36,.96), opacity 1s cubic-bezier(.57,-0.11,.36,.96);
             }
         &:hover{
             .fa-heart{
@@ -562,7 +564,9 @@ $title-font: "Title-font";
             .restaurants__card {
                 width: 45%;
                 margin-bottom: 30px;
-
+            }
+            img {
+                height: 300px;
             }
         }
         .footer__infos{
