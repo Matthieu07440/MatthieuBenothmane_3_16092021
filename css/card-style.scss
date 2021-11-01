@@ -482,6 +482,19 @@ body {
                     font-size: x-large;
                     width: 45px;
                     margin-left: 80px;
+                }
+                .menu__card--prix :hover {
+                    animation: prix 400ms linear 0s 1 alternate forwards;
+                    @keyframes prix {
+                        0% {
+                            opacity: 1;
+                            transform: translateX(200px);
+                        }
+                        100% {
+                            opacity: 1;
+                            transform: translateX(0px);
+                        }
+                    }
                 }       
                 .plat1{    
                     animation: menu 2s linear 0s 1 alternate forwards;

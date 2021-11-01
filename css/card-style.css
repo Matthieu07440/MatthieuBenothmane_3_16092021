@@ -523,6 +523,30 @@ body .content .footer__infos--contact a {
     width: 45px;
     margin-left: 80px;
   }
+  body .content .menu__card .menu__card--prix :hover {
+    -webkit-animation: prix 400ms linear 0s 1 alternate forwards;
+            animation: prix 400ms linear 0s 1 alternate forwards;
+  }
+  @-webkit-keyframes prix {
+    0% {
+      opacity: 1;
+      transform: translateX(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  @keyframes prix {
+    0% {
+      opacity: 1;
+      transform: translateX(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
   body .content .menu__card .plat1 {
     -webkit-animation: menu 2s linear 0s 1 alternate forwards;
             animation: menu 2s linear 0s 1 alternate forwards;
