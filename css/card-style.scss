@@ -189,6 +189,9 @@ body {
                     display: none;
                 }
                 &:hover{
+                    .menu__card--info {
+                        width: 90%;
+                }
                     .menu__card--prix {
                         animation: prix 400ms linear 0s 1 alternate forwards;
                         @keyframes prix {

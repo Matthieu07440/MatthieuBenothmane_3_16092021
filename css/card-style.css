@@ -177,6 +177,9 @@ body .content .menu__card li .menu__card--prix {
 body .content .menu__card li .fa-check-circle {
   display: none;
 }
+body .content .menu__card li:hover .menu__card--info {
+  width: 90%;
+}
 body .content .menu__card li:hover .menu__card--prix {
   -webkit-animation: prix 400ms linear 0s 1 alternate forwards;
           animation: prix 400ms linear 0s 1 alternate forwards;
