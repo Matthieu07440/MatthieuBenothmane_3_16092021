@@ -3,10 +3,9 @@ $secondary-color: #FF79DA;
 $third-color: #99E2D0;
 @mixin btn-color {
     background-image: linear-gradient(190deg, $primary-color, $secondary-color);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 $medium-font: "Roboto-medium";
 $thin-font: "Roboto-thin";
 $regular-font: "Roboto-regular";
@@ -65,7 +64,7 @@ body {
         color: $primary-color;
         font-size: xx-large;
         font-family: "Title-font";
-        background-color: #99E2D0;
+        background-color: $third-color;
         animation: loader 3s linear 1 forwards;
         @keyframes loader {
                 0% {
@@ -269,7 +268,7 @@ body {
                 font-size: medium;
                 height: 50px;
                 width: 200px;
-                background: linear-gradient($secondary-color,$primary-color, );
+                background: linear-gradient($secondary-color,$primary-color);
                 border-radius: 30px;
                 border-style: none;
                 color: white;
@@ -300,7 +299,7 @@ body {
             }
         }
         .function__menu {
-            width: 100%;
+            width: 95%;
             padding: 0px;
             display: flex;
             flex-direction: column;
@@ -435,7 +434,6 @@ body {
                     font-size: 9px;
                     font-weight: bold ;
                     transition: font-size 2s cubic-bezier(.57,-0.11,.36,.96), right 2s cubic-bezier(.57,-0.11,.36,.96), bottom 3s cubic-bezier(.57,-0.11,.36,.96), opacity 1s cubic-bezier(.57,-0.11,.36,.96);
-                    -webkit-transition: font-size 2s cubic-bezier(.57,-0.11,.36,.96), right 2s cubic-bezier(.57,-0.11,.36,.96), bottom 3s cubic-bezier(.57,-0.11,.36,.96), opacity 1s cubic-bezier(.57,-0.11,.36,.96);
                 }
             &:hover{
                 .fa-heart{
@@ -473,7 +471,6 @@ body {
             }
         }
         .footer__infos--propose  {
-            width: 185px;
             display: flex;
             align-items: center;
             margin-bottom: 10px;
@@ -483,7 +480,6 @@ body {
             }
         }
         .footer__infos--partner  {
-            width: 160px;
             display: flex;
             align-items: center;
             margin-bottom: 10px;
@@ -650,10 +646,26 @@ body {
             .footer__infos{
                 margin-left: 20px;
                 margin-right: 20px;
+                margin-bottom: 20px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
-                align-items: flex-start;
+                align-items: center;
+                img{
+                    margin-bottom: 0px;
+                }
+            }
+            .footer__infos--propose  {
+                margin-bottom: 0px;
+            }
+            .footer__infos--partner  {
+                margin-bottom: 0px;
+            }
+            .footer__infos--legal {
+                margin-bottom: 0px;
+            }
+            .footer__infos--contact{
+                margin-bottom: 0px;
             }
         }
     }    

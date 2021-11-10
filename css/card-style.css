@@ -50,7 +50,7 @@ body .content {
   flex-direction: column;
 }
 body .content header {
-  width: 70%;
+  width: 65%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -148,7 +148,7 @@ body .content .menu__card li {
   overflow: hidden;
 }
 body .content .menu__card li .menu__card--info {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -178,7 +178,7 @@ body .content .menu__card li .fa-check-circle {
   display: none;
 }
 body .content .menu__card li:hover .menu__card--info {
-  width: 90%;
+  width: 65%;
 }
 body .content .menu__card li:hover .menu__card--prix {
   -webkit-animation: prix 400ms linear 0s 1 alternate forwards;
@@ -530,21 +530,21 @@ body .content .footer__infos--contact a {
   @-webkit-keyframes prix {
     0% {
       opacity: 1;
-      transform: translateX(200px);
+      transform: translateX(240px);
     }
     100% {
       opacity: 1;
-      transform: translateX(0px);
+      transform: translateX(60px);
     }
   }
   @keyframes prix {
     0% {
       opacity: 1;
-      transform: translateX(200px);
+      transform: translateX(240px);
     }
     100% {
       opacity: 1;
-      transform: translateX(0px);
+      transform: translateX(60px);
     }
   }
   body .content .menu__card .plat1 {
@@ -662,6 +662,7 @@ body .content .footer__infos--contact a {
   }
   body .content .commander button {
     height: 100px;
+    font-size: xx-large;
   }
   body .content .footer__infos {
     margin-left: 20px;

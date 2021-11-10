@@ -42,7 +42,6 @@ body {
         font-size: large;
         margin: 0px;
     }
-     
     h4 {
         font-family: $thin-font;
         font-size: medium;
@@ -62,7 +61,7 @@ body {
         display: flex;
         flex-direction: column;
         header {
-            width: 70%;
+            width: 65%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -159,7 +158,7 @@ body {
                 cursor: pointer;
                 overflow: hidden;
                 .menu__card--info {
-                        width: 100%;
+                        width: 90%;
                         display: flex;
                         justify-content: space-between;
                         align-items: flex-end;
@@ -190,7 +189,7 @@ body {
                 }
                 &:hover{
                     .menu__card--info {
-                        width: 90%;
+                        width: 65%;
                 }
                     .menu__card--prix {
                         animation: prix 400ms linear 0s 1 alternate forwards;
@@ -488,11 +487,11 @@ body {
                     @keyframes prix {
                         0% {
                             opacity: 1;
-                            transform: translateX(200px);
+                            transform: translateX(240px);
                         }
                         100% {
                             opacity: 1;
-                            transform: translateX(0px);
+                            transform: translateX(60px);
                         }
                     }
                 }       
@@ -589,6 +588,7 @@ body {
                 text-align: center;
                 button{
                     height: 100px;
+                    font-size: xx-large;
                 }
             }
             .footer__infos{

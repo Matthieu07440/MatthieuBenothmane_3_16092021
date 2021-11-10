@@ -391,7 +391,7 @@ body .content .function nav {
   width: 97%;
 }
 body .content .function__menu {
-  width: 100%;
+  width: 95%;
   padding: 0px;
   display: flex;
   flex-direction: column;
@@ -523,6 +523,7 @@ body .content .restaurants .restaurants__card--fav .fa-heart {
 body .content .restaurants .restaurants__card--fav .fa-heart-like {
   background-image: linear-gradient(190deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
   right: 29px;
@@ -531,7 +532,6 @@ body .content .restaurants .restaurants__card--fav .fa-heart-like {
   font-size: 9px;
   font-weight: bold;
   transition: font-size 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), right 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), bottom 3s cubic-bezier(0.57, -0.11, 0.36, 0.96), opacity 1s cubic-bezier(0.57, -0.11, 0.36, 0.96);
-  -webkit-transition: font-size 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), right 2s cubic-bezier(0.57, -0.11, 0.36, 0.96), bottom 3s cubic-bezier(0.57, -0.11, 0.36, 0.96), opacity 1s cubic-bezier(0.57, -0.11, 0.36, 0.96);
 }
 body .content .restaurants .restaurants__card--fav:hover .fa-heart {
   color: #9356DC;
@@ -565,7 +565,6 @@ body .content .footer__infos img {
   margin-bottom: 20px;
 }
 body .content .footer__infos--propose {
-  width: 185px;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -575,7 +574,6 @@ body .content .footer__infos--propose i {
   margin-right: 10px;
 }
 body .content .footer__infos--partner {
-  width: 160px;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -726,9 +724,25 @@ body .content .footer__infos--contact a {
   body .content .footer__infos {
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
+  }
+  body .content .footer__infos img {
+    margin-bottom: 0px;
+  }
+  body .content .footer__infos--propose {
+    margin-bottom: 0px;
+  }
+  body .content .footer__infos--partner {
+    margin-bottom: 0px;
+  }
+  body .content .footer__infos--legal {
+    margin-bottom: 0px;
+  }
+  body .content .footer__infos--contact {
+    margin-bottom: 0px;
   }
 }/*# sourceMappingURL=style.css.map */
