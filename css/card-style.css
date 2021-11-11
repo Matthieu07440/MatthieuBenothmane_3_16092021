@@ -427,7 +427,6 @@ body .content .footer__infos img {
   margin-bottom: 20px;
 }
 body .content .footer__infos--propose {
-  width: 185px;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -437,7 +436,6 @@ body .content .footer__infos--propose i {
   margin-right: 10px;
 }
 body .content .footer__infos--partner {
-  width: 160px;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
