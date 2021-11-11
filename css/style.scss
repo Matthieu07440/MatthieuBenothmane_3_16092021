@@ -93,7 +93,7 @@ body {
                 border-left: 10px solid $primary-color;
                 border-right: 10px solid $primary-color;
                 border-radius: 150px;
-                animation: circle1 2s ease infinite both;
+                animation: circle1 2s ease infinite backwards;
         }
         @keyframes circle1 {
                 0%{
@@ -128,7 +128,7 @@ body {
                 border-top: 5px double white;
                 border-bottom: 5px solid white;
                 border-radius: 190px;
-                animation: circle2 2s linear reverse infinite both;
+                animation: circle2 2s linear reverse infinite backwards;
         }
         @keyframes circle2 {
                 0%{
